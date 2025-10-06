@@ -34,7 +34,7 @@ fi
 
 if [[ "$USAGE" -ge "$THRESHOLD" ]]; then
   # Build personalizations array for each recipient
-  PERSONALIZATIONS=$(printf '%s\n' "${TO_EMAIL[@]}" | jq -R '{to: [{email: .}], subject: "Disk Usage Alert"}' | jq -s .)
+  PERSONALIZATIONS=$(printf '%s\n' "${TO_EMAIL[@]}" | jq -R '{to: [{email: .}], subject: "Disk Usage Alert - Collections website"}' | jq -s .)
 
   # Build JSON payload
   JSON=$(cat <<EOF
